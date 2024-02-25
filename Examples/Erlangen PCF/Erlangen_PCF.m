@@ -8,11 +8,11 @@ clc; clear variables; %close all;
 
 %% Set up problem
 
-lambda = 633e-9;
-k0 = 2*pi/lambda;
-beta = k0; % Propagation constant will be close to that of free space.
-Nx = 1000;
-NoModes = 30;
+lambda = 633e-9; % Wavelength in nm
+k0 = 2*pi/lambda; % Wavenumber
+beta = k0; % Fundamental mode propagation constant will be close to that of free space.
+Nx = 1000; % Size of problem space. Assumed to be square, i.e. Nx x Nx
+NoModes = 30; % Number of modes we wish to find.
 
 [x, n] = GenerateFibreProfile(Nx);
 dx = x(2) - x(1);
